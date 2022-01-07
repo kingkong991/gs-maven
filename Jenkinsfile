@@ -5,10 +5,7 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'Maven1';
     withSonarQubeEnv() {
-      sh "${mvn}/bin/mvn clean verify sonar:sonar 
-      {-Dsonar.projectKey=testbuild 
-       -Dsonar.host.url=http://http://192.168.64.46:9001/
-       }"
+      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=testbuild"
     }
   }
 }
