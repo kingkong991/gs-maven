@@ -26,3 +26,17 @@ public static void switchCasePrimer() {
             	System.out.println("Default");
     	}
 }
+
+public class Bird {
+  
+    void fly() {
+        System.out.println("Flying!!");
+    }
+}
+  
+public class Ostrich extends Bird {
+  
+    void fly() {
+        throw new IllegalStateException("An ostrich can't fly");   
+    }
+}
